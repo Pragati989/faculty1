@@ -1,13 +1,11 @@
-package com.pragati.view;
+package com.pragati.dao;
 
 import com.pragati.bean.Faculty;
 import com.pragati.bean.Course;
 
 import com.pragati.util.SessionUtil;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 
 public class FacultyDao {
     public static void main(String[] args)

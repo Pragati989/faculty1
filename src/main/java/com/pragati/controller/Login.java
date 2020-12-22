@@ -53,26 +53,28 @@ public class Login {
 
             Faculty f=(Faculty)criteria.uniqueResult();
             if(f!=null)
-            {   System.out.println(f.getUname());
+            {
+
+                System.out.println(f.getUname());
                 System.out.println(f.getPassword());
                 if(f.getPassword().equals(password)) {
                     System.out.println("hii");
-                    return Response.ok().entity(200).build();
-                   // return Response.seeOther(new URI("../facultyhomepage.html")).build();
-                    //return Response.ok().entity("SUCCCESS").build();
+                    //return Response.ok().entity(200).build();
+                    //return Response.seeOther(new URI("../facultyhomepage.html")).build();
+                    return Response.ok().entity("SUCCESS").build();
                    }
 
                 else
                 {
-                    return Response.seeOther(new URI("../index.html")).build();
-                    //return Response.ok().entity("FAILURE").build();
+                    //return Response.seeOther(new URI("../index.html")).build();
+                    return Response.ok().entity("FAILURE").build();
                     //return Response.noContent().build();
                 }
             }
             else
             {
-                return Response.seeOther(new URI("../index.html")).build();
-                //return Response.ok().entity("FAILURE").build();
+                //return Response.seeOther(new URI("../index.html")).build();
+                return Response.ok().entity("FAILURE").build();
                 //return Response.noContent().build();
 
             }

@@ -1,6 +1,5 @@
-package com.pragati.view;
+package com.pragati.dao;
 
-import com.pragati.bean.Faculty;
 import com.pragati.util.SessionUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
